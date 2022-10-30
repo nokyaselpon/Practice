@@ -162,7 +162,7 @@ html,body{
 
 /* MEDIA QUEUERIES */
 
-@media (max-width:350px){
+@media (max-width:400px){
     body{
         background-color: #f4f4f4;
 }
@@ -177,18 +177,19 @@ html,body{
 }
 
 .nav-bar{
-    background-color:blue;
     font-size: 12px;
 }
 
 .showcase-images{
     grid-template-columns: repeat(2,1fr);
+    gap:1rem;
+    margin-right: 10px;
 }
 
 .beach-images,
 .beach-images::before{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
 }
 
