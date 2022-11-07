@@ -217,7 +217,6 @@ img{
     .showcase-text{
         margin-top: -4rem;
         text-align: center;
-        line-height: 1.7;
     }
 
     .showcase-text p{
@@ -257,13 +256,12 @@ img{
         background-color: rgba(0, 0, 0, 0.1);
     }
 
-    .showcase{
-        height: 500px;
-    }
+   
 
-    .showcase-text{
-        margin-top: 0px;
+    .showcase .showcase-text{
+        margin-top: 4rem;
     }
+   
     .under-showcase .grid-images{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -278,6 +276,10 @@ img{
         justify-content: center;
         max-width: 350px;
         margin: 0 auto;
+    }
+
+    .foot{
+        text-align: center;
     }
 
 }
