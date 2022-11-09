@@ -395,6 +395,10 @@ img{
         width: 350px;
     }
 
+    .showcase{
+        height: 600px;
+    }
+
     .showcase .showcase-text{
         margin-top: 4rem;
     }
@@ -405,14 +409,11 @@ img{
     }
 
     .featured .featured-products .featured-images{
-        display: grid;
         grid-template-columns:1fr;
-        gap: 1rem;
-        text-align: center;
-        font-weight: bold;
-        justify-content: center;
-        max-width: 350px;
-        margin: 0 auto;
+    }
+
+    .other-products .other-products-images img{
+        height: 200px;
     }
 
     .showcase-two{
@@ -423,6 +424,7 @@ img{
         text-align: center;
         padding-top: 5rem;
     }
+
 
     .foot{
         text-align: center;
