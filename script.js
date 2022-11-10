@@ -1,5 +1,12 @@
-const hamburger = document.getElementById("hamburger");
-const navmenu = document.getElementById("navmenu");
+const hamburger = document.querySelector(".hamburger");
+const navmenu = document.querySelector(".navmenu");
+const hamburgerr = document.getElementById("hamburger");
+const navmenuu = document.getElementById("navmenu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navmenu.classList.toggle("active");
+})
 
 document.onclick = function(clicks){
     if(clicks.target.id !== "hamburger" && clicks.target.id !== "navmenu")
@@ -7,9 +14,4 @@ document.onclick = function(clicks){
         hamburger.classList.remove("active");
         navmenu.classList.remove("active");
     }
-}
-
-hamburger.onclick = function(){
-    hamburger.classList.toggle("active");
-    navmenu.classList.toggle("active");
 }
