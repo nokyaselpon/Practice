@@ -72,6 +72,24 @@ img{
     font-weight: bold;
 }
 
+.nav-flex .nav-list{
+    display: flex;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.nav-flex .nav-list .hamburger .line{
+    display: block;
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+    background-color: #000;
+}
+
+
 /* SHOWCASE */
 
 .showcase{
@@ -86,6 +104,7 @@ img{
     gap: 2rem;
     align-items: center;
     justify-content: center;
+    flex-basis: 50%;
 }
 
 .showcase-text{
@@ -307,28 +326,60 @@ img{
 }
 
 
-
-
 /* MEDIA QUERIES TAB */
 
 @media (max-width:768px) {
 
     /* NAV QUERIES */
-    .nav-flex{
-        flex-direction: column;
+
+    .hamburger{
+        display: block;
     }
 
-    .nav-flex ul{
-        margin-top: 10px;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
-        width: 500px;
-        height: 65px;
+    .hamburger.active .line:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .line:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .line:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-flex .navmenu{
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        height: 350px;
+        background-color: var(--secondary-clr);
+        opacity: 0.95;
+        width: 100%;
         text-align: center;
+        transition: 0.3s;
+        border-radius: 15px;
+    }
+
+    .nav-flex .navmenu.active{
+        left: 0;
+        animation: slideleft 1s ease-in-out;
+    }
+
+    @keyframes slideleft {
+        0%{
+            transform: translateX(-100%);
+        }
+
+        100%{
+            transform: translateX(0%);
+        }
     }
 
     .nav-flex li{
-        padding: 20px 0;
+        color: #fff;
+        margin: 1rem 0;
     }
     
     /* SHOWCASE QUERIES */
@@ -385,6 +436,9 @@ img{
 /* MEDIA QUERIES PHONE */
 
 @media (max-width:500px){
+    .nav-logo h1{
+        font-size: 1.7rem;
+    }
 
     .nav-flex li{
         margin-inline: 3px;
