@@ -16,8 +16,7 @@ body,html{
     font-weight: 500;
     line-height: 1.5;
     color: #000;
-    overflow: auto;
-
+    overflow-x: hidden;
 }
 
 
@@ -300,6 +299,52 @@ img{
     height: 500px;
 }
 
+/* Testimonial */
+.testimonial{
+    margin-bottom: 3rem;
+}
+.testimonial-content h1{
+    text-align: center;
+}
+
+.testimonial-content .featured-bar{
+    display: flex;
+    width: 220px;
+    margin: 1rem auto;
+    border: 1px solid var(--dark-orange-clr);
+}
+
+.testimonial-content .testimonial-flex{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 900px;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    margin-top: 2rem
+    
+}
+
+.testimonial-content .testimonial-flex .testimonial-card{
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0px 5px 10px #d3d3d3;
+    border-radius: 10px;
+}
+
+.testimonial-content .testimonial-flex .testimonial-card img{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 1rem;
+}
+
+.testimonial-content .testimonial-flex .testimonial-card p{
+    font-size: 14px;
+}
+
+
 /* FOOTER */
 
 .foot{
@@ -350,7 +395,7 @@ img{
         display: flex;
         flex-direction: column;
         padding-top: 2rem;
-        position: fixed;
+        position: absolute;
         left: -100%;
         top: 60px;
         height: 350px;
@@ -364,7 +409,7 @@ img{
 
     .nav-flex .navmenu.active{
         left: 0;
-        animation: slideleft 1s ease-in-out;
+        animation: slideleft 500ms ease-in-out;
     }
 
     @keyframes slideleft {
@@ -387,6 +432,22 @@ img{
     .showcase{
         height: 500px;
     }
+
+    .showcase.active{
+        margin-top: 330px;
+        animation: slidetop 1000ms ease-in-out;
+    }
+
+    @keyframes slidetop {
+        0%{
+            transform: translateY(-100%);
+        }
+
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
     .showcase-text{
         text-align: center;
     }
@@ -430,6 +491,13 @@ img{
         display: none;
     }
 
+    /* TESTIMONIAL */
+    
+    .testimonial-content .testimonial-flex{
+       flex-direction: column;
+       width: 300px;
+       gap: 3rem;
+    }
     
 }
 
