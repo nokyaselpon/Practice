@@ -1,22 +1,16 @@
-const hamburger = document.querySelector(".hamburger");
-const navmenu = document.querySelector(".navmenu");
-const hamburgerr = document.getElementById("hamburger");
-const navmenuu = document.getElementById("navmenu");
-const showcase = document.querySelector(".showcase");
-const showcasee = document.getElementById("showcase");
+const hamburger = document.getElementById("hamburger")
+const navmenu = document.getElementById("navmenu")
+const showcase = document.getElementById("showcase")
+const abt = document.getElementById("about-content")
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navmenu.classList.toggle("active");
-    showcase.classList.toggle("active");
-})
-
-document.onclick = function(clicks){
-    if(clicks.target.id !== "hamburger" && clicks.target.id !== "navmenu" && clicks.target.id !== "showcase")
-    {
-        hamburger.classList.remove("active");
-        navmenu.classList.remove("active");
-        showcase.classList.remove("active");
-    }
+let clickss = () => {
+    hamburger.classList.toggle("active")
+    navmenu.classList.toggle("active")
+    abt.classList.toggle("active")
 }
 
+hamburger.addEventListener("click", clickss)
+
+hamburger.addEventListener("click", () => {
+        showcase.classList.toggle("active")
+    })
